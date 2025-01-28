@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>$if(page-title)$$page-title$$else$$title$$endif$</title>
+    <meta name="description" content="$meta-description$" />
+    <meta name="keywords" content="$meta-keywords$" />
+    <meta
+      name="author"
+      content="$if(meta-author)$$meta-author$$else$$author$$endif$"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="$base$/assets/images/logo.png?timestamp=$logo_timestamp$"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="$base$/assets/css/style.css?timestamp=$css_timestamp$"
+    />
+    $if(highlight-code)$
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    $endif$
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <a href="$base$/index.html">
+          <img
+            src="$base$/assets/images/logo.png?timestamp=$logo_timestamp$"
+            alt="Logo"
+          />
+          My Website
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="title">$title$</h1>
+      $if(subtitle)$
+      <h2 class="subtitle">$subtitle$</h2>
+      $endif$ $if(date)$
+      <p class="date">$date$</p>
+      $endif$ $if(abstract)$
+      <div class="abstract">
+        <div class="abstract-title">$abstract-title$</div>
+        $abstract$
+      </div>
+      $endif$ $body$
+    </main>
+    <footer>
+      <div class="footer-table">
+        <div class="footer-column">
+          <h4>Colomn 1</h4>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Colomn 2</h4>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Colomn 3</h4>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>Copyright &copy; 2025 My Website. All rights reserved.</div>
+    </footer>
+    $if(highlight-code)$
+    <script>
+      hljs.highlightAll();
+    </script>
+    $endif$
+  </body>
+</html>
